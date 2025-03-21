@@ -16,13 +16,14 @@ def calculator():
         operation = "multiplication"
     elif operation == "/":
         # Check for division by zero
-        if num2 == 0:
-            print("Cannot divide by zero")
-            return
-        result = num1 / num2
-        operation = "division"
+        if num2 != 0:
+            result = num1/num2
+            operation = "Division"
+        else:
+            print("Division by zero is not allowed!")
+
     else:
-        print("Invalid operation. PLease use one of the following: +, -, *, /")
+        print("Invalid operation entered!")
         return
 
     # Print the result
